@@ -33,7 +33,7 @@ public class Users {
     @Column(name = "image",nullable = false)
     private String image;
 
-    @Column(name = "name",length = 1)
+    @Column(name = "gender",length = 1)
     private String gender;
 
     public Users() {
