@@ -18,4 +18,10 @@ public class UsersServiceImpl implements UsersService{
         return usersRepository.findAll();
     }
 
+    @Override
+    public Users addUsers(Users users)
+    {
+        return usersRepository.save(users);
+    }
+
 }

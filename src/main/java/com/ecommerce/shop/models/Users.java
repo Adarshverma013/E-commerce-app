@@ -20,17 +20,17 @@ public class Users {
     @Column(name = "password",nullable = false,length = 100)
     private String password;
 
-    @Column(name = "role",nullable = false)
+    @Column(name = "role")
     @Enumerated(value = EnumType.STRING)
     private Role role;
 
-    @Column(name = "address",nullable = false)
+    @Column(name = "address")
     private String address;
 
     @Column(name = "contact",nullable = false)
     private String contact;
 
-    @Column(name = "image",nullable = false)
+    @Column(name = "image")
     private String image;
 
     @Column(name = "gender",length = 1)
@@ -39,8 +39,8 @@ public class Users {
     public Users() {
     }
 
-    public Users(String name, String email, String password, Role role, String address, String contact, String image, String gender) {
-        this.userName = name;
+    public Users(String userName, String email, String password, Role role, String address, String contact, String image, String gender) {
+        this.userName = userName;
         this.email = email;
         this.password = password;
         this.role = role;
@@ -54,12 +54,12 @@ public class Users {
         return id;
     }
 
-    public String getName() {
+    public String getUserName() {
         return userName;
     }
 
-    public void setName(String name) {
-        this.userName = name;
+    public void setUserName(String userName) {
+        this.userName = userName;
     }
 
     public String getEmail() {
